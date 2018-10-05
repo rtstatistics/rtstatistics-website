@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Tutorial: How to setup real-time statistics in 5 minutes | rtstatistics.com</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<link rel="pingback" href="./../../xmlrpc.php">
+
+<!--[if lt IE 9]>
+<script src="./wp-content/themes/zerif-lite/js/html5.js"></script>
+<link rel="stylesheet" href="./wp-content/themes/zerif-lite/css/ie.css" type="text/css">
+<![endif]-->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="rtstatistics.com &raquo; Feed" href="./../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="rtstatistics.com &raquo; Comments Feed" href="./../../comments/feed/index.html" />
+<link rel='stylesheet' id='zerif_font-css'  href='./../../wp-content/themes/zerif-lite/css/zerif_slug_fonts.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_font_all-css'  href='./../../wp-content/themes/zerif-lite/css/open-sans_font_34678.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_bootstrap_style-css'  href='./../../wp-content/themes/zerif-lite/css/bootstrap.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_fontawesome-css'  href='./../../wp-content/themes/zerif-lite/css/font-awesome.min.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_pixeden_style-css'  href='./../../wp-content/themes/zerif-lite/css/pixeden-icons.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_style-css'  href='./../../wp-content/themes/zerif-lite/style.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_responsive_style-css'  href='./../../wp-content/themes/zerif-lite/css/responsive.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='customized_style-css'  href='./../../wp-content/themes/zerif-lite/css/customized.css?ver=4.6.1' type='text/css' media='all' />
+<script type='text/javascript' src='./../../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='./../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='./../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="./../../xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 4.6.1" />
+<link rel="canonical" href="./index.html" />
+<link rel='shortlink' href='./../../index.html?p=240' />
+<link rel="alternate" type="application/json+oembed" href="./../../wp-json/oembed/1.0/embed/index.html?url=http%3A%2F%2F%2Fresources%2Fhow-to-setup-real-time-statistics-in-5-minutes%2F" />
+<link rel="alternate" type="text/xml+oembed" href="./../../wp-json/oembed/1.0/embed/index.html?url=http%3A%2F%2F%2Fresources%2Fhow-to-setup-real-time-statistics-in-5-minutes%2F&#038;format=xml" />
+<link rel="alternate" href="./index.html" hreflang="en" />
+<link rel="alternate" href="http://zh.rtstatistics.com/zh-resources/how-to-setup-real-time-statistics-in-5-minutes/" hreflang="zh" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('./../wp-content/uploads/2015/12/bubble_1920x1280.jpg'); background-repeat: repeat; background-position: top left; background-attachment: scroll; }
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70952510-1', {'siteSpeedSampleRate':100,'sampleRate':100});
+  ga('send', 'pageview');
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?309dadd6cd25f3a327bc34ca4c26df47";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<style type="text/css">
+code{
+  font-size:14px;
+  color: #404040;
+}
+td code{
+  background-color:white;
+}
+pre{
+  font-size:15px;
+}
+</style><link rel="icon" href="./../../wp-content/uploads/2015/12/logo_240-150x150.png" sizes="32x32" />
+<link rel="icon" href="./../../wp-content/uploads/2015/12/logo_240.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="./../../wp-content/uploads/2015/12/logo_240.png" />
+<meta name="msapplication-TileImage" content="./wp-content/uploads/2015/12/logo_240.png" />
+
+</head>
+
+
+
+
+	<body class="page page-id-240 page-child parent-pageid-46 page-template page-template-template-fullwidth page-template-template-fullwidth-php" >
+
+
+
+
+
+
+<!-- =========================
+
+   PRE LOADER
+
+============================== -->
+
+
+<header id="home" class="header">
+
+	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+
+		<div class="container-fluid">
+
+			<div class="navbar-header responsive-logo">
+
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+
+				<span class="sr-only">Toggle navigation</span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				</button>
+
+
+
+				<a href="./../../index.html" class="navbar-brand"><img src="./../wp-content/uploads/2015/12/logo_name_32w.png" alt="rtstatistics.com"></a>
+
+
+			</div>
+
+			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation"   id="site-navigation">
+
+				<ul id="menu-default-menu" class="nav navbar-nav navbar-right responsive-nav main-nav-list"><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="./../../products/index.html">Products</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="./../../solutions/index.html">Solutions</a></li>
+<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="./../../pricing/index.html">Pricing</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-custom-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-57"><a href="./../index.html">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93"><a href="./../how-to-send-data-to-rtstatistics-com-in-5-minutes/index.html">Tutorial: How to send data to rtstatistics.com in 5 minutes</a></li>
+	<li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-240 current_page_item menu-item-244"><a href="./index.html">Tutorial: How to setup real-time statistics in 5 minutes</a></li>
+	<li id="menu-item-128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="./../live-statistics-trump-vs-clinton-according-to-comments-in-askreddit/index.html">Demo &#8211; Live statistics: Trump vs. Clinton according to comments in &#8220;askreddit&#8221;</a></li>
+	<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="./../live-usage-statistics-of-mobile-app-libbooks/index.html">Demo &#8211; Live usage statistics of mobile app &#8220;LibBooks&#8221;</a></li>
+	<li id="menu-item-302" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-custom-parent menu-item-302"><a href="./../index.html">More resources &#8230;</a></li>
+</ul>
+</li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="https://manage.rtstatistics.com/auth/login">Log in</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-37"><a href="#">Language/语言</a>
+<ul class="sub-menu">
+	<li id="menu-item-33-en" class="lang-item lang-item-2 lang-item-en lang-item-first current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-33-en"><a href="./index.html" hreflang="en-US" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English" /><span style="margin-left:0.3em;">English</span></a></li>
+	<li id="menu-item-33-zh" class="lang-item lang-item-5 lang-item-zh menu-item menu-item-type-custom menu-item-object-custom menu-item-33-zh"><a href="http://zh.rtstatistics.com/zh-resources/how-to-setup-real-time-statistics-in-5-minutes/" hreflang="zh-CN" lang="zh-CN"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFqSURBVHjaYrzOwPAPjJgYQEDAleHVbhADIvgHLPgHiQ0QQCxAlkR9NW8sw+cV/1gV/7Gb/hV4+vfzhj8Mv/78//Pn/+/f/8AkhH1t0yaAAAJp4I37zyz2lDfu79uqv/++/WYz+cuq/vvLxt8gdb+A5K9/v34B2SyyskBLAAII5JAva/7/+/z367a/f3/8ZuT9+//Pr78vQUrB6n4CSSj6/RuoASCAWEDO/fD3ddEfhv9/OE3/sKj8/n7k9/fDQNUIs/+DVf8HawAIIJCT/v38C3Hr95N/GDh/f94AVvT7N8RUBpjxQAVADQABBNLw/y/Ifwy/f/399ufTOpDBEPf8g5sN0QBEDAwAAQTWABEChgOSA9BVA00E2wAQQCANQBbEif/AzoCqgLkbbBYwWP/+//sXqBYggFhAkfL7D7OkJFCOCSj65zfUeFjwg8z++/ffX5AGoGKAAGI8jhSRyIw/SJH9D4aAYQoQYAA6rnMw1jU2vQAAAABJRU5ErkJggg==" title="中文 (中国)" alt="中文 (中国)" /><span style="margin-left:0.3em;">中文 (中国)</span></a></li>
+</ul>
+</li>
+</ul>
+			</nav>
+
+		</div>
+
+	</div>
+
+	<!-- / END TOP BAR -->
+
+<div class="clear"></div>
+
+</header> <!-- / END HOME SECTION  -->
+
+
+
+	<div id="content" class="site-content">
+
+<div class="container">
+
+
+
+<div class="content-left-wrap col-md-12">
+
+	<div id="primary" class="content-area">
+
+		<main id="main" class="site-main" role="main">
+
+
+
+			
+
+
+				
+
+
+<article id="post-240" class="post-240 page type-page status-publish hentry">
+
+	<header class="entry-header">
+			</header><!-- .entry-header -->
+
+
+
+	<div class="entry-content">
+
+		<h1>How to setup real-time statistics in 5 minutes</h1>
+<p>&nbsp;</p>
+<p>With rtstatistics.com，you can define datasets, and send your data in real-time to your datasets in the cloud. You probably have already tried the steps documented in <a href="./../how-to-send-data-to-rtstatistics-com-in-5-minutes/index.html">How to send data to rtstatistics.com in 5 minutes</a>. Now let&#8217;s try to define statistics for your datasets.</p>
+<p>Statistics are based on datasets. A dataset can have any number of statistics defined. A statistics is actually the definition of these based on a dataset:</p>
+<ul>
+<li>Do statistics on what &#8211; for example, order amount, mobile short message content, media play count, etc.</li>
+<li>What kind of statistics &#8211; for example, average order amount, total order amount, minimal amount in a single order, maximal amount in a single order; Or number of distinct short message content.</li>
+<li>Do separate statistics by what &#8211; For example, by store id, by combination of sender city and receiver city, or just by nothing which means an overall statistics is sufficient.</li>
+<li>Aggregate by what time period &#8211; For example, aggregate per 5 minutes, per 1 hour, or per 1 day, etc.</li>
+</ul>
+<p>After the statistics is defined, the result of the statistics can be queried by these criteria:</p>
+<ul>
+<li>Category &#8211; for example, id of the store, or combination of two cities &#8211; one as the sender city and other as the receiver city.</li>
+<li>Aggregation period &#8211; for example, 1 hour.</li>
+<li>Start and end time &#8211; for specifying the time period that the original data must fall into</li>
+<li>Type of statistics to be returned &#8211; combination of the total, the maximum, etc.</li>
+</ul>
+<p>Statistics done by rtstatistics.com is real-time. For example, if a new order with amount 100 is received at 8:23:34PM, and you do a query at 8:23:35PM, you should be able to notice that the total order amount has at least a 100 increment.</p>
+<p>Setting up a statistics involves the following activities:</p>
+<ol>
+<li>define the aggregation period hierarchy, or choose an existing aggregation period hierarchy that you have already defined</li>
+<li>define fields for your detaset, or use existing fields that you have already defined</li>
+<li>choose which fields to be used for categorizing, and which field to be used to for statistics</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Step 1: Define the aggregation period hierarchy</h3>
+<p>&nbsp;</p>
+<p>It is called a hierarchy because you can put multiple aggregation periods together. For example, &#8220;every 15 minutes&#8221; and &#8220;every 1 hour&#8221; can be defined in one aggregation period hierarchy, so that if you need the statistics to be aggregated by both these periods, you just need to define a statistics referring to a single aggregation period hierarchy, you don&#8217;t need to define two statistics.</p>
+<p>An aggregation period hierarchy does not need to belong to a single statistics or dataset. Once defined, it can be referred by more than one statistics, and those statistics can be based on different datasets as well.</p>
+<ol>
+<li>Go to https://manage.rtstatistics.com/ and log in, in Management API, expand &#8220;periods&#8221;, click on &#8220;POST /periods&#8221;
+<p id="EoajfNq"><img class="alignnone size-full wp-image-184" src="./../../wp-content/uploads/2016/04/img_570703b13a5ad.png" alt="" srcset="./../../wp-content/uploads/2016/04/img_570703b13a5ad.png 778w, ./../../wp-content/uploads/2016/04/img_570703b13a5ad-300x213.png 300w" sizes="(max-width: 778px) 100vw, 778px" /></p>
+</li>
+<li>Scroll down and click on the &#8220;Model Schema&#8221; content on the right to have the sample value copied to parameter value input area
+<p id="YiGLbUW"><img class="alignnone size-full wp-image-186" src="./../../wp-content/uploads/2016/04/img_570706f22ef56.png" alt="" srcset="./../../wp-content/uploads/2016/04/img_570706f22ef56.png 831w, ./../../wp-content/uploads/2016/04/img_570706f22ef56-300x139.png 300w" sizes="(max-width: 831px) 100vw, 831px" /></p>
+</li>
+<li>Modify the parameter value according to you needs:
+<ul>
+<li>name &#8211; name of the aggregation period hierarchy, for example, &#8220;per 1 hour&#8221;, &#8220;per 15 minutes&#8221;, &#8221; per 15 minutes and per 1 hour&#8221;.</li>
+<li>periods &#8211; this is an array or aggregation periods, each aggregation period can have the following fields:
+<ul>
+<li>amount &#8211; can be any positive number such like 1, 15, etc.</li>
+<li>unit &#8211; unit of the period, for example &#8220;minute&#8221;，&#8221;hour&#8221;, &#8220;day&#8221;, &#8220;month&#8221;, &#8220;year&#8221;. You can add a &#8220;s&#8221; to the end if you like.</li>
+<li>timeZone &#8211; time zone that will be used for interpreting the time used in aggregation, for example, &#8220;UTC&#8221;, &#8220;Australia/Melbourne&#8221;. For the full list of supported time zones, please see <a href="./../supported-time-zones/index.html">Supported time zones</a>.</li>
+<li>keepWithinMinutes &#8211; how long should the statistics results to be kept, for example, use 43200 for 30 days, 129600 for 90 days, 1025280 for 2 years.</li>
+<li>upperLevelPeriods is not supported for now, you can just delete it, and don&#8217;t forget the delete the previous comma &#8220;,&#8221; as well. Or, you can also just delete &#8220;{}&#8221; to make the array empty.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click on the &#8220;Try it out!&#8221; button</li>
+<li>Scroll down to see the response. You should be able to see the generated ID for this new aggregation period hierarchy. Select and copy it, we need to use it later.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Step 2: Define fields</h3>
+<p>&nbsp;</p>
+<p>Fields for statistics can be of these kinds:</p>
+<ul>
+<li>native &#8211; fields that can be mapped directly to a field in the received data</li>
+<li>calculated &#8211; fields that are calculated through formulas using fields in the received data</li>
+</ul>
+<p>For example, if we have data received like this:<br />
+<code>{"header":"this is a header", "body":{"content":"this is the content", "remark":"this is the remark"}, "size"=999, "sequence"=3}</code><br />
+We can define fields like these:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Definition</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header</td>
+<td>native</td>
+<td>header</td>
+<td>&#8220;this is a header&#8221;</td>
+</tr>
+<tr>
+<td>size</td>
+<td>native</td>
+<td>size</td>
+<td>999</td>
+</tr>
+<tr>
+<td>content</td>
+<td>native</td>
+<td>body.content</td>
+<td>&#8220;this is the content&#8221;</td>
+</tr>
+<tr>
+<td>remark</td>
+<td>native</td>
+<td>body.remark</td>
+<td>&#8220;this is the remark&#8221;</td>
+</tr>
+<tr>
+<td>hasWordThisInContent</td>
+<td>calculated</td>
+<td>body.content.contains(&#8220;this&#8221;)</td>
+<td>true</td>
+</tr>
+<tr>
+<td>hasWordThatInContentOrRemark</td>
+<td>calculated</td>
+<td>body.content.contains(&#8220;that&#8221;) || body.remark.contains(&#8220;that&#8221;)</td>
+<td>false</td>
+</tr>
+<tr>
+<td>sizePlusSequence</td>
+<td>calculated</td>
+<td>size + sequence</td>
+<td>1002</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Find the ID of your dataset. If you haven&#8217;t copied it so somewhere, you can try to find it in the list of all your datasets. Expand&#8221;datasets&#8221;, go to &#8220;GET /datasets&#8221;, ”，click on the &#8220;Try it out!&#8221; button, then you will see all your datasets in the returned result below.
+<p id="VmPsVEA"><img class="alignnone size-full wp-image-188" src="./../../wp-content/uploads/2016/04/img_57070d4d92b1d.png" alt="" srcset="./../../wp-content/uploads/2016/04/img_57070d4d92b1d.png 780w, ./../../wp-content/uploads/2016/04/img_57070d4d92b1d-300x117.png 300w" sizes="(max-width: 780px) 100vw, 780px" /></p>
+</li>
+<li>Expand &#8220;fields&#8221;, go to &#8220;POST /datasets/{datasetId}/fields&#8221;
+<p id="crPOsaE"><img class="alignnone size-full wp-image-189" src="./../../wp-content/uploads/2016/04/img_57070e1b552f1.png" alt="" srcset="./../../wp-content/uploads/2016/04/img_57070e1b552f1.png 806w, ./../../wp-content/uploads/2016/04/img_57070e1b552f1-300x153.png 300w" sizes="(max-width: 806px) 100vw, 806px" /></p>
+</li>
+<li>Input the ID of the dataset
+<p id="sekgccY"><img class="alignnone size-full wp-image-190" src="./../../wp-content/uploads/2016/04/img_57070eaaebc34.png" alt="" srcset="./../../wp-content/uploads/2016/04/img_57070eaaebc34.png 733w, ./../../wp-content/uploads/2016/04/img_57070eaaebc34-300x128.png 300w" sizes="(max-width: 733px) 100vw, 733px" /></p>
+</li>
+<li>Scroll down and click on the &#8220;Model Schema&#8221; content on the right to have the sample value copied to parameter value input area</li>
+<li>Modify the parameter value according to how you want the fields to be defined
+<ul>
+<li>name &#8211; name of the field. It must start with a letter and contains only letters of numbers.</li>
+<li>path or formula &#8211; Only one of them is required. For native fields, keep path; for calculated fields, keep formula.</li>
+<li>type &#8211; can be &#8220;native&#8221; or &#8220;calculated&#8221;. It can also be left out &#8211; fields with path are considered to be native while fields with formula are considered to be calculated.</li>
+<li>If the field is native, and has the same name as path, then the definition can be simplified as: <code>{"name": "myFieldName"}</code></li>
+<li>If the field is calculated, since the type can be left out, the definition can be simplified as: <code>{"name": "myCalculatedField", "formular":"body.remark.contains(\"that\")"}</code></li>
+</ul>
+</li>
+<li>Click on the &#8220;Try it out!&#8221; button</li>
+<li>Scroll down to see the response. If there is no error message then the field had been created successfully.</li>
+<li>You can repeat the steps above to create more fields if you like. Creating a calculated field for a constant value is allowed, but normally you don&#8217;t need to, constant values can be used directly when defining statistics.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Step 3: Define statistics</h3>
+<p>&nbsp;</p>
+<p>Before defining the statistics, you need to know the ID of the dataset, ID of the aggregation period hierarchy, and names of the fields you want to use in the statistics.</p>
+<ol>
+<li>Expand &#8220;statistics&#8221;, go to &#8220;POST /statistics&#8221;
+<p id="YXHPEFx"><img class="alignnone size-full wp-image-193" src="./../../wp-content/uploads/2016/04/img_570713d08eefd.png" alt="" srcset="./../../wp-content/uploads/2016/04/img_570713d08eefd.png 737w, ./../../wp-content/uploads/2016/04/img_570713d08eefd-300x139.png 300w" sizes="(max-width: 737px) 100vw, 737px" /></p>
+</li>
+<li>Scroll down and click on the &#8220;Model Schema&#8221; content on the right to have the sample value copied to parameter value input area
+<p id="ZhhLYuu"><img class="alignnone size-full wp-image-194" src="./../../wp-content/uploads/2016/04/img_5707144b70e79.png" alt="" srcset="./../../wp-content/uploads/2016/04/img_5707144b70e79.png 930w, ./../../wp-content/uploads/2016/04/img_5707144b70e79-300x120.png 300w" sizes="(max-width: 930px) 100vw, 930px" /></p>
+</li>
+<li>Input parameter values according to how you want the statistics to be defined:
+<ul>
+<li>name &#8211; name of the statistics</li>
+<li>datasetId &#8211; ID of the dataset that the statistics is based on</li>
+<li>periodsId &#8211; ID of the aggregation period hierarchy that applies to the statistics</li>
+<li>valueField &#8211; name of the field that will be used as the subject of the statistics. You can also use a number constant here, for example &#8220;1&#8221;</li>
+<li>includeCountDistinct &#8211; can be either &#8220;true&#8221; or &#8220;false&#8221; meaning that whether number of unique values in the value field need to be included in the statistics. For example, if there are 5 data items with the firstName field as the value field, and the values of firstName field in these 5 data items are &#8220;Alice&#8221;, &#8220;Bob&#8221;, &#8220;Clark&#8221;, &#8220;Alice&#8221;, &#8220;Bob&#8221;, in this case the number of unique values is 3.
+<ul>
+<li>It does not matter if includeCountDistinct is &#8220;true&#8221; or &#8220;false&#8221;, as long as the value of the value field is a number, count, summary, maximum, minimum, and average are always included in the statistics.</li>
+<li>When includeCountDistinct is &#8220;true&#8221;, if the value of the value field is not number，besides the number of unique values, count statistics will also be available.</li>
+</ul>
+</li>
+<li>keyFields &#8211; if you don&#8217;t need to categorize the statistics, this can be deleted，or you can just delete &#8220;{}&#8221; to make it an empty array. If you need to categorize the statistics, you can specify the fields to be used for determine which category the data falls into. For example:
+<ul>
+<li><code>["shopId", "category"]</code> means data will be categorized by the combination of values from shopId and category fields</li>
+<li><code>[["firstSalespersonId", "secondSalespersonId"], "category"]</code> means data will be categorized by the combination of values from (firstSalespersonId or secondSalespersonId) and category fields. In this case, the amount of an order will be put in both salesperson&#8217;s name separately. Whether you query using the first sales person&#8217;s ID or the second sales person&#8217;s ID, you the amount of the order will always be included in the result. If firstSalespersonId and secondSalespersonId in the received data are the same, the amount won&#8217;t be double counted for that person.</li>
+</ul>
+</li>
+<li>timestampFieldName &#8211; name of the field that the timestamp value should be retrieved. If not specified, you can just delete it, and the time that the data item is received will be used. The timestamp is used to do aggregation according to the aggregation period.</li>
+<li>timestampFieldFormat &#8211; format of the timestamp field. You can delete it if you don&#8217;t specify a timestamp field. When specified, its value can be:
+<ul>
+<li>Date time format pattern, for example&#8221;yyyyMMdd&#8221;, &#8220;yyyyMMdd:HHmm&#8221;. In this case the value of the timestamp field should be a string and will be parsed with the pattern you specified. For details about date time format pattern, please see <a href="./../date-time-patterns/index.html">Date time patterns</a>.</li>
+<li>&#8220;EPOCH_MILLIS&#8221;, in this case the value of the timestamp field should be a number, representing the milliseconds since UNIX epoch (00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970)</li>
+<li>&#8220;EPOCH_SECONDS&#8221;, in this case the value of the timestamp field should be a number, representing the seconds since UNIX epoch (00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970)</li>
+</ul>
+</li>
+<li>timestampFieldZone &#8211; time zone of the timestamp, for example, &#8220;UTC&#8221;, &#8220;Australia/Melbourne&#8221;. For the full list of supported time zones, please see <a href="./../supported-time-zones/index.html">Supported time zones</a>. You can delete it if you don&#8217;t specify a timestamp field.</li>
+</ul>
+</li>
+<li>Click on the &#8220;Try it out!&#8221; button</li>
+<li>Scroll down to see the response. You should be able to see the generated ID of the newly created statistics. Select and copy it, you will need it later for doing query.</li>
+<li>You may repeat the above steps to create more statistics</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Step 4: Query the statistics results</h3>
+<p>&nbsp;</p>
+<p>Statistics results are only generated after definition of statistics is saved. Data items received before statistics definition is saved will not be processed. In order to get statistics results through query, you need to ensure that there are data items received after you saved the statistics definition.</p>
+<ol>
+<li>Find the query key of the dataset. For detailed steps please see &#8220;Step 3: Get the API Keys of the Dataset&#8221; in <a href="./../how-to-send-data-to-rtstatistics-com-in-5-minutes/index.html">Tutorial: How to send data to rtstatistics.com in 5 minutes</a>.</li>
+<li>Open https://api.rtstatistics.com/ in the browser</li>
+<li>Use one of the query keys as API key
+<p id="uSljwse"><img class="alignnone size-full wp-image-197" src="./../../wp-content/uploads/2016/04/img_570730f22382f.png" alt="" srcset="./../../wp-content/uploads/2016/04/img_570730f22382f.png 866w, ./../../wp-content/uploads/2016/04/img_570730f22382f-300x81.png 300w" sizes="(max-width: 866px) 100vw, 866px" /></p>
+</li>
+<li>Expand &#8220;query&#8221;, go to &#8220;GET /statistics/{id}/detail&#8221;</li>
+<li>Specify query criteria:<br />
+<img class="alignnone size-full wp-image-202" src="./../../wp-content/uploads/2016/04/img_5707341d7c7e1.png" alt="" srcset="./../../wp-content/uploads/2016/04/img_5707341d7c7e1.png 616w, ./../../wp-content/uploads/2016/04/img_5707341d7c7e1-300x194.png 300w" sizes="(max-width: 616px) 100vw, 616px" /></p>
+<ul>
+<li>id &#8211; ID of the statistics</li>
+<li>_columns &#8211; for specifying types of statistics results. If it is &#8220;all&#8221; or left blank, then all available types of statistics results will be returned. It can be a combination (separated by comma or space) of the following:
+<ul>
+<li>count &#8211; include number of values evaluated</li>
+<li>sum &#8211; include summary/total of evaluated values if they are numbers or strings representing numbers</li>
+<li>avg &#8211; include average of evaluated values if they are numbers or strings representing numbers</li>
+<li>min &#8211; include minimal value among evaluated values if they are numbers or strings representing numbers</li>
+<li>max &#8211; include maximal value among evaluated values if they are numbers or strings representing numbers</li>
+<li>unique &#8211; include number of unique/distinct values evaluated</li>
+<li>estimated &#8211; include an indicator on whether number of unique values is accurate or estimated. Normally when number of unique values is small, it is accurate, when it gets large, it is estimated.</li>
+<li>values &#8211; include unique values if the number of unique values is accurate</li>
+</ul>
+</li>
+<li>_from &#8211; time in &#8220;yyyyMMddHHmm&#8221; or &#8220;yyyyMMddHH&#8221; or &#8220;yyyyMMdd&#8221; or &#8220;yyyyMM&#8221; format, meaning that only statistics of data items at or after this time should be included.</li>
+<li>_to &#8211; time in &#8220;yyyyMMddHHmm&#8221; or &#8220;yyyyMMddHH&#8221; or &#8220;yyyyMMdd&#8221; or &#8220;yyyyMM&#8221; format, meaning that only statistics of data items before this time should be included.</li>
+<li>_period &#8211; aggregation period. For example, &#8220;1 hour&#8221;, &#8220;5 minutes&#8221;, &#8220;10 hour&#8221;. A trailing &#8220;s&#8221; can be appended if you like. If there is only one aggregation period in the aggregation period hierarchy then you don&#8217;t have to specify it.</li>
+<li>_zone &#8211; time zone of the aggregation period. If there is only one aggregation period as specified by _period in the aggregation period hierarchy, you don&#8217;t have to specify the time zone.</li>
+<li>_absent &#8211; can be &#8220;empty&#8221; or omitted. If it is &#8220;empty&#8221; then the categorization key fields without value specified will have an empty string value, otherwise, they will have a null value.</li>
+<li>dynamic parameters &#8211; names and values of the categorization key fields. They can be mapped to the fields you specified in keyFields when you define the statistics. For example, if the keyFields is defined as <code>["shopId", "category"]</code>, then you can add two dynamic parameters here &#8211; shopId and category, if you specify their values as &#8220;100&#8221; and &#8220;shoes&#8221; respectively, the statistics results will be those for the combination of shopId equals &#8220;100&#8221; and category equals &#8220;shoes&#8221;.</li>
+</ul>
+</li>
+</ol>
+<h3>Done!</h3>
+<p>Now, you have successfully created real-time statistics, and you have got query results. Quite easy, isn&#8217;t it?</p>
+<p>If there is any issue or question, feel free to send to <a href="mailto:support@rtstatistics.com">support@rtstatistics.com</a>.</p>
+<h2>Other resources</h2>
+<ul>
+<li><a href="./../how-to-send-data-to-rtstatistics-com-in-5-minutes/index.html">Tutorial: How to send data to rtstatistics.com in 5 minutes</a></li>
+<li><a href="http://en.rtstatistics.com/resources/live-statistics-trump-vs-clinton-according-to-comments-in-askreddit/">Demo – Live statistics: Trump vs. Clinton according to comments in “askreddit”</a></li>
+<li><a href="./../live-usage-statistics-of-mobile-app-libbooks/index.html">Demo – Live statistics: Usage of mobile app “LibBooks”</a></li>
+</ul>
+
+		
+	</div><!-- .entry-content -->
+
+	
+</article><!-- #post-## -->
+
+
+				
+
+
+			
+
+
+		</main><!-- #main -->
+
+	</div><!-- #primary -->
+
+</div><!-- .content-left-wrap -->
+
+
+
+
+</div><!-- .container -->
+
+
+	</div><!-- .site-content -->
+
+<footer id="footer">
+
+<div class="container">
+
+
+
+	<div class="col-md-3 company-details"><div class="icon-top green-text"><img src="./../../wp-content/themes/zerif-lite/images/envelope4-green.png"></div><a href="mailto:info@rtstatistics.com">info@rtstatistics.com</a></div><div class="col-md-3 copyright"><ul class="social"><li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li><li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li><li><a target="_blank" href="http://www.linkedin.com/company/rtstatistics-com"><i class="fa fa-linkedin"></i></a></li></ul>Copyright ©2015-2016 Real-time Statistics Technologies</div>
+</div> <!-- / END CONTAINER -->
+
+</footer> <!-- / END FOOOTER  -->
+
+
+
+<script type='text/javascript' src='./../../wp-content/themes/zerif-lite/js/bootstrap.min.js?ver=20120206'></script>
+<script type='text/javascript' src='./../../wp-content/themes/zerif-lite/js/jquery.knob.js?ver=20120206'></script>
+<script type='text/javascript' src='./../../wp-content/themes/zerif-lite/js/smoothscroll.js?ver=20120206'></script>
+<script type='text/javascript' src='./../../wp-content/themes/zerif-lite/js/scrollReveal.js?ver=20120206'></script>
+<script type='text/javascript' src='./../../wp-content/themes/zerif-lite/js/zerif.js?ver=20120206'></script>
+
+
+
+</body>
+
+</html>
