@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+
+<!-- Mirrored from zh.rtstatistics.com/zh-resources/how-to-send-data-to-rtstatistics-com-in-5-minutes/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Oct 2018 08:17:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>教程：5分钟搞定发送数据 | rtstatistics.com</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<link rel="pingback" href="../../xmlrpc.php">
+
+<!--[if lt IE 9]>
+<script src="http://zh.rtstatistics.com/wp-content/themes/zerif-lite/js/html5.js"></script>
+<link rel="stylesheet" href="http://zh.rtstatistics.com/wp-content/themes/zerif-lite/css/ie.css" type="text/css">
+<![endif]-->
+
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="rtstatistics.com &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="rtstatistics.com &raquo; 评论Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.rtstatistics.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='zerif_font-css'  href='../../wp-content/themes/zerif-lite/css/zerif_slug_fonts1c9b.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_font_all-css'  href='../../wp-content/themes/zerif-lite/css/open-sans_font_346781c9b.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_bootstrap_style-css'  href='../../wp-content/themes/zerif-lite/css/bootstrap1c9b.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_fontawesome-css'  href='../../wp-content/themes/zerif-lite/css/font-awesome.mind3b3.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_pixeden_style-css'  href='../../wp-content/themes/zerif-lite/css/pixeden-iconsd3b3.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_style-css'  href='../../wp-content/themes/zerif-lite/styled3b3.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_responsive_style-css'  href='../../wp-content/themes/zerif-lite/css/responsived3b3.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='customized_style-css'  href='../../wp-content/themes/zerif-lite/css/customized1c9b.css?ver=4.6.1' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.6.1" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexd1a7.html?p=156' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed34bc.json?url=http%3A%2F%2Fzh.rtstatistics.com%2Fzh-resources%2Fhow-to-send-data-to-rtstatistics-com-in-5-minutes%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed8e55?url=http%3A%2F%2Fzh.rtstatistics.com%2Fzh-resources%2Fhow-to-send-data-to-rtstatistics-com-in-5-minutes%2F&amp;format=xml" />
+<link rel="alternate" href="../../resources/how-to-send-data-to-rtstatistics-com-in-5-minutes/index.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="zh" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('../../../rts-sg-www.cloudapp.net/wp-content/uploads/2015/12/bubble_1920x1280.jpg'); background-repeat: repeat; background-position: top left; background-attachment: scroll; }
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70952510-1', {'siteSpeedSampleRate':100,'sampleRate':100});
+  ga('send', 'pageview');
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "http://hm.baidu.com/hm.js?309dadd6cd25f3a327bc34ca4c26df47";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<style type="text/css">
+code{
+  font-size:14px;
+  color: #404040;
+}
+td code{
+  background-color:white;
+}
+pre{
+  font-size:15px;
+}
+</style><link rel="icon" href="../../wp-content/uploads/2015/12/logo_240-150x150.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2015/12/logo_240.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="../../wp-content/uploads/2015/12/logo_240.png" />
+<meta name="msapplication-TileImage" content="http://zh.rtstatistics.com/wp-content/uploads/2015/12/logo_240.png" />
+
+</head>
+
+
+
+
+	<body class="page page-id-156 page-child parent-pageid-52 page-template page-template-template-fullwidth page-template-template-fullwidth-php" >
+
+
+
+
+
+
+<!-- =========================
+
+   PRE LOADER
+
+============================== -->
+
+
+<header id="home" class="header">
+
+	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+
+		<div class="container-fluid">
+
+			<div class="navbar-header responsive-logo">
+
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+
+				<span class="sr-only">Toggle navigation</span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				</button>
+
+
+
+				<a href="../../zh-index.html" class="navbar-brand"><img src="../../wp-content/uploads/2015/12/logo_name_32w.png" alt="rtstatistics.com"></a>
+
+
+			</div>
+
+			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation"   id="site-navigation">
+
+				<ul id="menu-%e7%bc%ba%e7%9c%81%e4%b8%bb%e8%8f%9c%e5%8d%95" class="nav navbar-nav navbar-right responsive-nav main-nav-list"><li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="../../zh-products/index.html">产品</a></li>
+<li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a href="../../zh-solutions/index.html">解决方案</a></li>
+<li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a href="../../zh-pricing/index.html">价格</a></li>
+<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-custom-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-54"><a href="../index.html">文档与资源</a>
+<ul class="sub-menu">
+	<li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-156 current_page_item menu-item-158"><a href="index.html">教程：5分钟搞定发送数据</a></li>
+	<li id="menu-item-209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-209"><a href="../how-to-setup-real-time-statistics-in-5-minutes/index.html">教程：5分钟设置好实时统计</a></li>
+	<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="../live-statistics-trump-vs-clinton-according-to-comments-in-askreddit/index.html">演示 &#8211; 实时统计：在“askreddit”评论中提及特朗普的次数对比提及克林顿的次数</a></li>
+	<li id="menu-item-229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-229"><a href="../live-usage-statistics-of-mobile-app-libbooks/index.html">演示 &#8211; 实时统计：手机应用LibBooks的使用情况</a></li>
+	<li id="menu-item-303" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-custom-parent menu-item-303"><a href="../index.html">更多文档与资源 &#8230;&#8230;</a></li>
+</ul>
+</li>
+<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="https://manage.rtstatistics.com/auth/login">登录</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-38"><a href="http://xn--ug7c/">语言/Language</a>
+<ul class="sub-menu">
+	<li id="menu-item-31-en" class="lang-item lang-item-2 lang-item-en lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-31-en"><a href="../../resources/how-to-send-data-to-rtstatistics-com-in-5-minutes/index.html" hreflang="en-US" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English" /><span style="margin-left:0.3em;">English</span></a></li>
+	<li id="menu-item-31-zh" class="lang-item lang-item-5 lang-item-zh current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-31-zh"><a href="index.html" hreflang="zh-CN" lang="zh-CN"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFqSURBVHjaYrzOwPAPjJgYQEDAleHVbhADIvgHLPgHiQ0QQCxAlkR9NW8sw+cV/1gV/7Gb/hV4+vfzhj8Mv/78//Pn/+/f/8AkhH1t0yaAAAJp4I37zyz2lDfu79uqv/++/WYz+cuq/vvLxt8gdb+A5K9/v34B2SyyskBLAAII5JAva/7/+/z367a/f3/8ZuT9+//Pr78vQUrB6n4CSSj6/RuoASCAWEDO/fD3ddEfhv9/OE3/sKj8/n7k9/fDQNUIs/+DVf8HawAIIJCT/v38C3Hr95N/GDh/f94AVvT7N8RUBpjxQAVADQABBNLw/y/Ifwy/f/399ufTOpDBEPf8g5sN0QBEDAwAAQTWABEChgOSA9BVA00E2wAQQCANQBbEif/AzoCqgLkbbBYwWP/+//sXqBYggFhAkfL7D7OkJFCOCSj65zfUeFjwg8z++/ffX5AGoGKAAGI8jhSRyIw/SJH9D4aAYQoQYAA6rnMw1jU2vQAAAABJRU5ErkJggg==" title="中文 (中国)" alt="中文 (中国)" /><span style="margin-left:0.3em;">中文 (中国)</span></a></li>
+</ul>
+</li>
+</ul>
+			</nav>
+
+		</div>
+
+	</div>
+
+	<!-- / END TOP BAR -->
+
+<div class="clear"></div>
+
+</header> <!-- / END HOME SECTION  -->
+
+
+
+	<div id="content" class="site-content">
+
+<div class="container">
+
+
+
+<div class="content-left-wrap col-md-12">
+
+	<div id="primary" class="content-area">
+
+		<main id="main" class="site-main" role="main">
+
+
+
+			
+
+
+				
+
+
+<article id="post-156" class="post-156 page type-page status-publish hentry">
+
+	<header class="entry-header">
+			</header><!-- .entry-header -->
+
+
+
+	<div class="entry-content">
+
+		<h1>5分钟搞定发送数据</h1>
+<p>&nbsp;</p>
+<p>rtstatistics.com是一个基于云的SaaS平台，它可以对海量的数据进行真正实时的收集和统计。而且统计延时小于1秒。详细的产品介绍请参考这里：《<a href="../../zh-products/index.html">真正实时的海量数据统计平台</a>》。数据的发送和统计查询都可以通过基于HTTPS的REST API完成。仅需5分钟，您就可以学会如何向rtstatistics.com发送数据。大体上只需要做这么几件事情：</p>
+<ul>
+<li>创建一个数据集，并获得新创建数据集的ID和发送秘钥</li>
+<li>发送数据给这个数据集</li>
+<li>（可选）检查发送的数据是否被成功接收</li>
+</ul>
+<p>&nbsp;</p>
+<h3>第一步：打开 <a href="https://manage.rtstatistics.com/">https://manage.rtstatistics.com</a> 然后登陆</h3>
+<p>&nbsp;</p>
+<p>没注册是吧？不要紧，根本就不需要注册！只要你有这几种账号之中的一个就可以直接登录了：GitHub、BitBucket、Google（也就是你的gmail账号）、Microsoft（也就是你的hotmail或outlook.com账号）。作为一个开发者，十有八九这几个账号你全都有，再怎么不济也会至少有其中一个吧。</p>
+<p>在登录界面上会看到这样的选项：</p>
+<p id="NVOmdue"><img class="alignnone size-full wp-image-79 " src="../../wp-content/uploads/2016/01/img_568def779e034.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568def779e034.png 416w, http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568def779e034-300x131.png 300w" sizes="(max-width: 416px) 100vw, 416px" /></p>
+<p>点击其中任何一个图标，浏览器将跳转到所选账号相对应的网站，然后就是用你自己的账号登录并授权rtstatistics.com获取你的基本信息和电子邮件地址。授权操作只在第一次的时候需要。</p>
+<p>你的邮件地址将被rtstatistics.com用于把你不同的账号关联起来。例如，如果你用同一个邮件地址注册了Hotmail和Gmail服务，不论你用Hotmail还是Gmail账号登录rtstatistics.com都可以，不会被当作是两个人。这样万一Gmail被404了你还可以用Hotmail账号登录。</p>
+<p>接下来浏览器会跳转回到rtstatistics.com，如果是初次登录的话这时候还会需要确认使用协议和隐私条款。最后会来到基于swagger-ui的API控制台。我们以后会做一个更酷的管理控制台界面，但目前所有管理操作还是只能通过swagger-ui或者是直接的API调用。</p>
+<p>API有两套：管理API和数据API。你可以在API控制台界面上在这两套API之间进行切换。对于管理API，如果已经登录就不需要提供api_key，如果不登陆的话需要提供api_key做身份认证之用。对于数据API，必须要提供api_key。</p>
+<p>如果你是高手的话，可能不屑于为了试用个API还得登录。那样的话你只需要登录一次，把api_key记下来，以后就可以直接打开 <a href="https://api.rtstatistics.com/">https://api.rtstatistics.com/</a> ，用api_key进行认证。</p>
+<p>当然，真正的高手应该会直接写程序或用工具来调用API的。</p>
+<p>&nbsp;</p>
+<h3>第二步：创建一个数据集</h3>
+<p>&nbsp;</p>
+<p>在能够发送数据之前，必须创建一个用来存放数据的数据集。这可以通过管理API来完成。</p>
+<ol>
+<li>点击“datasets”以看到所有数据集相关的API
+<p id="NUfNYlW"><img class="alignnone size-full wp-image-80 " src="../../wp-content/uploads/2016/01/img_568df2b17c0c5.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568df2b17c0c5.png 726w, http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568df2b17c0c5-300x126.png 300w" sizes="(max-width: 726px) 100vw, 726px" /></p>
+</li>
+<li>点击“POST /datasets”以查看详情
+<p id="WbADgnt"><img class="alignnone size-full wp-image-149 " src="../../wp-content/uploads/2016/04/img_5705a4dedf149.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_5705a4dedf149.png 709w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_5705a4dedf149-300x180.png 300w" sizes="(max-width: 709px) 100vw, 709px" /></p>
+</li>
+<li>在下面找到右方的“Model Schema”，在上面点击一下，其中的样例就会被拷贝到参数输入框里面
+<p id="ueVDYJL"><img class="alignnone size-full wp-image-82 " src="../../wp-content/uploads/2016/01/img_568df32325e4c.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568df32325e4c.png 703w, http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568df32325e4c-300x79.png 300w" sizes="(max-width: 703px) 100vw, 703px" /></p>
+</li>
+<li>
+<p id="NjmvOKY">把其中的“string”改成新数据集的名字，比如说“My Dataset 1”</p>
+</li>
+<li>点击“Try it out!”按钮
+<p id="oUfBwCb"><img class="alignnone size-full wp-image-83 " src="../../wp-content/uploads/2016/01/img_568df370e3c6e.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568df370e3c6e.png 748w, http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568df370e3c6e-300x129.png 300w" sizes="(max-width: 748px) 100vw, 748px" /></p>
+</li>
+<li>向下滚动以查看服务器返回的结果。你将在返回结果中看到这个新数据集的ID。现在选取并复制该ID，接下来它会被用到。</li>
+</ol>
+<p>&nbsp;</p>
+<h3>第三步：得到数据集的API秘钥</h3>
+<p>&nbsp;</p>
+<p>调用数据API必须有API秘钥。向数据集发送数据的时候需要用到发送秘钥，查询数据集的统计结果需要用到查询秘钥。数据集的秘钥都是随机生成的长字符串。一旦你怀疑秘钥被泄漏，你可以生成新的秘钥替代掉旧的。</p>
+<p>现在你需要找到刚刚创建的数据集的API秘钥。</p>
+<ol>
+<li>在“datasets”里，点击“GET /datasets/{id}/keys”以查看详情
+<p id="dOxVhVj"><img class="alignnone size-full wp-image-151 " src="../../wp-content/uploads/2016/04/img_5705a5c0d6959.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_5705a5c0d6959.png 709w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_5705a5c0d6959-300x180.png 300w" sizes="(max-width: 709px) 100vw, 709px" /></p>
+</li>
+<li>把刚才复制下来的新创建的数据集的ID贴进去作为参数值</li>
+<li>点击“Try it out!”按钮</li>
+<li>向下滚动以查看服务器返回的结果。你将在返回结果中看到这个新数据集的所有API秘钥：两个发送秘钥和两个查询秘钥
+<p id="EvusngE"><img class="alignnone size-full wp-image-198 " src="../../wp-content/uploads/2016/04/img_570732a29154c.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_570732a29154c.png 790w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_570732a29154c-300x124.png 300w" sizes="(max-width: 790px) 100vw, 790px" /></p>
+</li>
+<li>现在选取并复制其中一个发送秘钥，接下来它会被用到</li>
+</ol>
+<p>&nbsp;</p>
+<h3>第四步：发送数据</h3>
+<p>&nbsp;</p>
+<p>为了方便操作，最好把当前浏览器窗口留作查询用，在一个新窗口中打开 <a href="https://api.rtstatistics.com/">https://api.rtstatistics.com</a> 用来进行数据发送。</p>
+<p>现在切换到新打开的发送窗口。</p>
+<ol>
+<li>把刚才复制的发送秘钥贴进去作为api key
+<p id="DVQWCXs"><img class="alignnone size-full wp-image-88 " src="../../wp-content/uploads/2016/01/img_568dfa03c5cf7.png" alt="" /></p>
+</li>
+<li>展开“data-items” -&gt; “POST /datasets/{id}/items”</li>
+<li>把数据集的ID贴进去作为“id”参数的值
+<p id="YiRijgA"><img class="alignnone size-full wp-image-89 " src="../../wp-content/uploads/2016/01/img_568dfcb2b4215.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568dfcb2b4215.png 676w, http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568dfcb2b4215-300x100.png 300w" sizes="(max-width: 676px) 100vw, 676px" /></p>
+</li>
+<li>输入任意JSON对象（单条数据，一次发一条）或者JSON数组（其中包含多条数据，一并发送）。比如可以试试这些：<br />
+<span style="color: #333399;">{&#8220;type&#8221;: &#8220;sale&#8221;, &#8220;amount&#8221;: 100, &#8220;shop&#8221;: &#8220;Flagship Shop&#8221;, &#8220;category&#8221;: &#8220;shoes&#8221;}</span><br />
+或者<br />
+<span style="color: #333399;">[{&#8220;location&#8221;: &#8220;vic-mel-cbd-flinders-192&#8221;, &#8220;level&#8221;: &#8220;warn&#8221;, &#8220;sensor1&#8221;: 5, &#8220;sensor2&#8221;: 300, &#8220;sensor3&#8221;: 23},</span><br />
+<span style="color: #333399;">{&#8220;location&#8221;: &#8220;vic-mel-cbd-flinders-193&#8221;, &#8220;level&#8221;: &#8220;log&#8221;, &#8220;sensor1&#8221;: 0, &#8220;sensor2&#8221;: 2, &#8220;sensor3&#8221;: 0},</span><br />
+<span style="color: #333399;">{&#8220;location&#8221;: &#8220;vic-mel-cbd-flinders-194&#8221;, &#8220;level&#8221;: &#8220;log&#8221;, &#8220;sensor1&#8221;: 2, &#8220;sensor2&#8221;: 11, &#8220;sensor3&#8221;: 9}]</span></li>
+<li>点击“Try it out!”按钮</li>
+<li>向下滚动以查看服务器返回的结果。你将在返回结果中看到服务器为收到的数据所生成的ID。加入输入的JSON内容有格式错误的话，在返回的结果中会看到错误信息。</li>
+</ol>
+<p>&nbsp;</p>
+<h3>第五步：检查数据是不是已被成功接收</h3>
+<p>&nbsp;</p>
+<p>发送给任意数据集的最后10条数据是可以被取到的。这对于排查问题会很有帮助。</p>
+<p>现在切换回查询窗口。</p>
+<ol>
+<li>找到“datasets”
+<p id="ZSuLXXZ"><img class="alignnone size-full wp-image-152 " src="../../wp-content/uploads/2016/04/img_5705a5fe600c9.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_5705a5fe600c9.png 709w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_5705a5fe600c9-300x180.png 300w" sizes="(max-width: 709px) 100vw, 709px" /></p>
+</li>
+<li>展开“GET /datasets/{id}/recent”</li>
+<li>把数据集的ID贴进去作为参数值</li>
+<li>点击“Try it out!”按钮</li>
+<li>向下滚动以查看服务器返回的结果。你将在返回结果中看到你刚刚发送的最后10条数据。由于这些数据是作为JSON对象中的字符串值返回的，所以其中的特殊字符（比如引号）是经过了转换的。
+<p id="MRpbVmQ"><img class="alignnone size-full wp-image-91 " src="../../wp-content/uploads/2016/01/img_568e007131620.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568e007131620.png 745w, http://zh.rtstatistics.com/wp-content/uploads/2016/01/img_568e007131620-300x186.png 300w" sizes="(max-width: 745px) 100vw, 745px" /><br />
+在“receivedTime”字段中的数字代表的是UTC时间自从1970年1月1号零时到这条数据被接收时所经过的毫秒数</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+<h3>完成！</h3>
+<p>&nbsp;</p>
+<p>现在你已经成功地创建了一个数据集并且向其中发送了数据，是不是很简单？接下来，不妨试试创建一项统计吧，可以参考这里：《<a href="../how-to-setup-real-time-statistics-in-5-minutes/index.html">5分钟设置好实时统计</a>》。</p>
+<p>如有任何的意见或者问题，欢迎发送邮件至：<a href="mailto:support@rtstatistics.com">support@rtstatistics.com</a>.</p>
+<p>&nbsp;</p>
+<h2>其他相关内容</h2>
+<ul>
+<li><a href="../how-to-setup-real-time-statistics-in-5-minutes/index.html">教程：5分钟设置好实时统计</a></li>
+<li><a href="../live-statistics-trump-vs-clinton-according-to-comments-in-askreddit/index.html">演示 – 实时统计：在“askreddit”评论中提及特朗普的次数对比提及克林顿的次数</a></li>
+<li><a href="../live-usage-statistics-of-mobile-app-libbooks/index.html">演示 – 手机应用LibBooks的实时使用情况统计</a></li>
+</ul>
+
+		
+	</div><!-- .entry-content -->
+
+	
+</article><!-- #post-## -->
+
+
+				
+
+
+			
+
+
+		</main><!-- #main -->
+
+	</div><!-- #primary -->
+
+</div><!-- .content-left-wrap -->
+
+
+
+
+</div><!-- .container -->
+
+
+	</div><!-- .site-content -->
+
+<footer id="footer">
+
+<div class="container">
+
+
+
+	<div class="col-md-3 company-details"><div class="icon-top green-text"><img src="../../wp-content/themes/zerif-lite/images/envelope4-green.png"></div><a href="mailto:info@rtstatistics.com">info@rtstatistics.com</a></div><div class="col-md-3 copyright"><ul class="social"><li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li><li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li><li><a target="_blank" href="http://www.linkedin.com/company/rtstatistics-com"><i class="fa fa-linkedin"></i></a></li></ul>Copyright ©2015-2016 Real-time Statistics Technologies</div>
+</div> <!-- / END CONTAINER -->
+
+</footer> <!-- / END FOOOTER  -->
+
+
+
+<script type='text/javascript' src='../../wp-content/themes/zerif-lite/js/bootstrap.min11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='../../wp-content/themes/zerif-lite/js/jquery.knob11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='../../wp-content/themes/zerif-lite/js/smoothscroll11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='../../wp-content/themes/zerif-lite/js/scrollReveal11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='../../wp-content/themes/zerif-lite/js/zerif11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed.min1c9b.js?ver=4.6.1'></script>
+
+
+
+</body>
+
+
+<!-- Mirrored from zh.rtstatistics.com/zh-resources/how-to-send-data-to-rtstatistics-com-in-5-minutes/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Oct 2018 08:18:15 GMT -->
+</html>

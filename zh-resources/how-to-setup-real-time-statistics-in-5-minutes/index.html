@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+
+<!-- Mirrored from zh.rtstatistics.com/zh-resources/how-to-setup-real-time-statistics-in-5-minutes/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Oct 2018 08:18:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>教程：5分钟设置好实时统计 | rtstatistics.com</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<link rel="pingback" href="../../xmlrpc.php">
+
+<!--[if lt IE 9]>
+<script src="http://zh.rtstatistics.com/wp-content/themes/zerif-lite/js/html5.js"></script>
+<link rel="stylesheet" href="http://zh.rtstatistics.com/wp-content/themes/zerif-lite/css/ie.css" type="text/css">
+<![endif]-->
+
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="rtstatistics.com &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="rtstatistics.com &raquo; 评论Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.rtstatistics.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='zerif_font-css'  href='../../wp-content/themes/zerif-lite/css/zerif_slug_fonts1c9b.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_font_all-css'  href='../../wp-content/themes/zerif-lite/css/open-sans_font_346781c9b.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_bootstrap_style-css'  href='../../wp-content/themes/zerif-lite/css/bootstrap1c9b.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_fontawesome-css'  href='../../wp-content/themes/zerif-lite/css/font-awesome.mind3b3.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_pixeden_style-css'  href='../../wp-content/themes/zerif-lite/css/pixeden-iconsd3b3.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_style-css'  href='../../wp-content/themes/zerif-lite/styled3b3.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_responsive_style-css'  href='../../wp-content/themes/zerif-lite/css/responsived3b3.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='customized_style-css'  href='../../wp-content/themes/zerif-lite/css/customized1c9b.css?ver=4.6.1' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.6.1" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexec4a.html?p=173' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embedd679.json?url=http%3A%2F%2Fzh.rtstatistics.com%2Fzh-resources%2Fhow-to-setup-real-time-statistics-in-5-minutes%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed2f5a?url=http%3A%2F%2Fzh.rtstatistics.com%2Fzh-resources%2Fhow-to-setup-real-time-statistics-in-5-minutes%2F&amp;format=xml" />
+<link rel="alternate" href="../../resources/how-to-setup-real-time-statistics-in-5-minutes/index.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="zh" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('../../../rts-sg-www.cloudapp.net/wp-content/uploads/2015/12/bubble_1920x1280.jpg'); background-repeat: repeat; background-position: top left; background-attachment: scroll; }
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70952510-1', {'siteSpeedSampleRate':100,'sampleRate':100});
+  ga('send', 'pageview');
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "http://hm.baidu.com/hm.js?309dadd6cd25f3a327bc34ca4c26df47";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<style type="text/css">
+code{
+  font-size:14px;
+  color: #404040;
+}
+td code{
+  background-color:white;
+}
+pre{
+  font-size:15px;
+}
+</style><link rel="icon" href="../../wp-content/uploads/2015/12/logo_240-150x150.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2015/12/logo_240.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="../../wp-content/uploads/2015/12/logo_240.png" />
+<meta name="msapplication-TileImage" content="http://zh.rtstatistics.com/wp-content/uploads/2015/12/logo_240.png" />
+
+</head>
+
+
+
+
+	<body class="page page-id-173 page-child parent-pageid-52 page-template page-template-template-fullwidth page-template-template-fullwidth-php" >
+
+
+
+
+
+
+<!-- =========================
+
+   PRE LOADER
+
+============================== -->
+
+
+<header id="home" class="header">
+
+	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+
+		<div class="container-fluid">
+
+			<div class="navbar-header responsive-logo">
+
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+
+				<span class="sr-only">Toggle navigation</span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				</button>
+
+
+
+				<a href="../../zh-index.html" class="navbar-brand"><img src="../../wp-content/uploads/2015/12/logo_name_32w.png" alt="rtstatistics.com"></a>
+
+
+			</div>
+
+			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation"   id="site-navigation">
+
+				<ul id="menu-%e7%bc%ba%e7%9c%81%e4%b8%bb%e8%8f%9c%e5%8d%95" class="nav navbar-nav navbar-right responsive-nav main-nav-list"><li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="../../zh-products/index.html">产品</a></li>
+<li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a href="../../zh-solutions/index.html">解决方案</a></li>
+<li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a href="../../zh-pricing/index.html">价格</a></li>
+<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-custom-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-54"><a href="../index.html">文档与资源</a>
+<ul class="sub-menu">
+	<li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a href="../how-to-send-data-to-rtstatistics-com-in-5-minutes/index.html">教程：5分钟搞定发送数据</a></li>
+	<li id="menu-item-209" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-173 current_page_item menu-item-209"><a href="index.html">教程：5分钟设置好实时统计</a></li>
+	<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="../live-statistics-trump-vs-clinton-according-to-comments-in-askreddit/index.html">演示 &#8211; 实时统计：在“askreddit”评论中提及特朗普的次数对比提及克林顿的次数</a></li>
+	<li id="menu-item-229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-229"><a href="../live-usage-statistics-of-mobile-app-libbooks/index.html">演示 &#8211; 实时统计：手机应用LibBooks的使用情况</a></li>
+	<li id="menu-item-303" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-custom-parent menu-item-303"><a href="../index.html">更多文档与资源 &#8230;&#8230;</a></li>
+</ul>
+</li>
+<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="https://manage.rtstatistics.com/auth/login">登录</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-38"><a href="http://xn--ug7c/">语言/Language</a>
+<ul class="sub-menu">
+	<li id="menu-item-31-en" class="lang-item lang-item-2 lang-item-en lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-31-en"><a href="../../resources/how-to-setup-real-time-statistics-in-5-minutes/index.html" hreflang="en-US" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English" /><span style="margin-left:0.3em;">English</span></a></li>
+	<li id="menu-item-31-zh" class="lang-item lang-item-5 lang-item-zh current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-31-zh"><a href="index.html" hreflang="zh-CN" lang="zh-CN"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFqSURBVHjaYrzOwPAPjJgYQEDAleHVbhADIvgHLPgHiQ0QQCxAlkR9NW8sw+cV/1gV/7Gb/hV4+vfzhj8Mv/78//Pn/+/f/8AkhH1t0yaAAAJp4I37zyz2lDfu79uqv/++/WYz+cuq/vvLxt8gdb+A5K9/v34B2SyyskBLAAII5JAva/7/+/z367a/f3/8ZuT9+//Pr78vQUrB6n4CSSj6/RuoASCAWEDO/fD3ddEfhv9/OE3/sKj8/n7k9/fDQNUIs/+DVf8HawAIIJCT/v38C3Hr95N/GDh/f94AVvT7N8RUBpjxQAVADQABBNLw/y/Ifwy/f/399ufTOpDBEPf8g5sN0QBEDAwAAQTWABEChgOSA9BVA00E2wAQQCANQBbEif/AzoCqgLkbbBYwWP/+//sXqBYggFhAkfL7D7OkJFCOCSj65zfUeFjwg8z++/ffX5AGoGKAAGI8jhSRyIw/SJH9D4aAYQoQYAA6rnMw1jU2vQAAAABJRU5ErkJggg==" title="中文 (中国)" alt="中文 (中国)" /><span style="margin-left:0.3em;">中文 (中国)</span></a></li>
+</ul>
+</li>
+</ul>
+			</nav>
+
+		</div>
+
+	</div>
+
+	<!-- / END TOP BAR -->
+
+<div class="clear"></div>
+
+</header> <!-- / END HOME SECTION  -->
+
+
+
+	<div id="content" class="site-content">
+
+<div class="container">
+
+
+
+<div class="content-left-wrap col-md-12">
+
+	<div id="primary" class="content-area">
+
+		<main id="main" class="site-main" role="main">
+
+
+
+			
+
+
+				
+
+
+<article id="post-173" class="post-173 page type-page status-publish hentry">
+
+	<header class="entry-header">
+			</header><!-- .entry-header -->
+
+
+
+	<div class="entry-content">
+
+		<h1>5分钟设置好实时统计</h1>
+<p>&nbsp;</p>
+<p>通过rtstatistics.com，你可以定义数据集，并把数据实时地发送到云端。具体过程可以参考《<a href="../how-to-send-data-to-rtstatistics-com-in-5-minutes/index.html">5分钟搞定发送数据到rtstatistics.com</a>》。接下来，就可以为数据集定义统计了。</p>
+<p>统计是基于数据集的。一个数据集可以拥有多项统计。一项统计其实就是基于某个数据集所定义的这些：</p>
+<ul>
+<li>对什么对象进行统计 &#8211; 比如订单金额、短消息内容、节目观看次数等</li>
+<li>统计哪些测度 &#8211; 比如对于订单金额，可以统计平均单笔金额、总金额、单笔最大金额、单笔最小金额这些信息；又比如对于短消息内容，可以获得互不相同的短信内容的条目数。</li>
+<li>根据什么进行分类统计 &#8211; 比如根据店面编号分别统计；又比如根据发件人省份与收件人省份的组合分别进行统计；再比如不做细分只做一个笼统的统计。</li>
+<li>按怎样的时间周期进行汇总 &#8211; 比如每5分钟汇总、每小时汇总、每天汇总等</li>
+</ul>
+<p>一旦定义好了统计，就可以根据这些对统计结果进行查询：</p>
+<ul>
+<li>类别 &#8211; 比如给定具体的店面编号；又比如给定收件人的具体省份与发件人的具体省份。</li>
+<li>汇总周期 &#8211; 比如“每小时”</li>
+<li>时间范围 &#8211; 比如起止时间</li>
+<li>需要获得的统计结果 &#8211; 也就是总数、最大数等等的组合</li>
+</ul>
+<p>rtstatistics.com所实现的统计是实时的，也就是说，假如在8点23分34秒有一笔金额为100的订单数据被送上来，在8点23分35秒对订单总金额统计进行查询的时候，就能发现总金额比之前增加了100。</p>
+<p>设置一项统计大体上包括这几件事情：</p>
+<ol>
+<li>定义统计汇总周期体系，或选择以前已经定义好的统计汇总周期体系</li>
+<li>给数据集定义字段，或用以前已经定义好的字段</li>
+<li>选择哪些字段以形成统计类别、哪个字段作为统计对象</li>
+</ol>
+<p>&nbsp;</p>
+<h3>第一步：定义汇总周期体系</h3>
+<p>&nbsp;</p>
+<p>之所以称之为汇总周期体系，是因为其中可以包含多个汇总周期。比如你可以把“每15分钟汇总”和“每1小时汇总”这两个周期定义在同一个汇总周期体系里，这样如果你同时需要每15分钟和每1小时汇总的统计，只需要定义一项引用这个汇总周期体系的统计，而不需要分别定义两项统计。</p>
+<p>汇总周期体系并不为某项统计或某个数据集所独享，一旦你定义好了某个汇总周期体系，它可以被不同的统计项所引用，而且引用它的统计项可以基于不同的数据集。</p>
+<ol>
+<li>登录进https://manage.rtstatistics.com/，进入管理API，展开“periods”，点击“POST /periods”
+<p id="EoajfNq"><img class="alignnone size-full wp-image-184 " src="../../wp-content/uploads/2016/04/img_570703b13a5ad.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_570703b13a5ad.png 778w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_570703b13a5ad-300x213.png 300w" sizes="(max-width: 778px) 100vw, 778px" /></p>
+</li>
+<li>在下面找到右方的“Model Schema”，在它上面点击一下，其中的样例就会被拷贝到参数输入框里面
+<p id="YiGLbUW"><img class="alignnone size-full wp-image-186 " src="../../wp-content/uploads/2016/04/img_570706f22ef56.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_570706f22ef56.png 831w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_570706f22ef56-300x139.png 300w" sizes="(max-width: 831px) 100vw, 831px" /></p>
+</li>
+<li>根据自己的需要修改其中的参数：
+<ul>
+<li>name &#8211; 这个汇总周期体系的名字，比如“每小时”、“每15分钟以及每1小时”。</li>
+<li>periods &#8211; 这是一个数组，里面可以有多个汇总周期，每一个汇总周期又可以有如下参数：
+<ul>
+<li>amount &#8211; 数量，比如1、15这样的数字。</li>
+<li>unit &#8211; 单位，比如“minute”，“hour”, “day”, “month”, “year”。必须是英文名，可以末尾带“s”也可以不带。</li>
+<li>timeZone &#8211; 时区，比如“UTC”、“Asia/Shanghai”、“Australia/Melbourne”。完整的时区列表可以再这里找到：<a href="../supported-time-zones/index.html">支持的时区列表</a>。在中国一般只需要用“Asia/Shanghai”就可以了（没有“Asia/Beijing”）。</li>
+<li>keepWithinMinutes &#8211; 汇总后的统计结果保存在系统中保留多久，比如43200代表保留30天，129600代表保留90天，1025280代表保留2年。</li>
+<li>upperLevelPeriods目前还不支持，可以整个删掉。删掉之后别忘了把前一个逗号“,”也删掉。或者只把upperLevelPeriods里的“{}”删掉也可以。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>点击“Try it out!”按钮</li>
+<li>向下滚动以查看服务器返回的结果。你将在返回结果中看到这个新的汇总周期体系的ID。把它复制下来，接下来的步骤中需要用到。</li>
+</ol>
+<p>&nbsp;</p>
+<h3>第二步：定义字段</h3>
+<p>&nbsp;</p>
+<p>这里所说的字段是供统计用的，有以下几种类型：</p>
+<ul>
+<li>直接对应到原始数据里相应字段（native）</li>
+<li>由原始数据通过公式得出的（calculated）</li>
+</ul>
+<p>比如说基于这样的数据结构：<br />
+<code>{"header":"this is a header", "body":{"content":"this is the content", "remark":"this is the remark"}, "size"=999, "sequence"=3}</code><br />
+可以定义出这些字段：</p>
+<p>&nbsp;</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>内容</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header</td>
+<td>native</td>
+<td>header</td>
+<td>&#8220;this is a header&#8221;</td>
+</tr>
+<tr>
+<td>size</td>
+<td>native</td>
+<td>size</td>
+<td>999</td>
+</tr>
+<tr>
+<td>content</td>
+<td>native</td>
+<td>body.content</td>
+<td>&#8220;this is the content&#8221;</td>
+</tr>
+<tr>
+<td>remark</td>
+<td>native</td>
+<td>body.remark</td>
+<td>&#8220;this is the remark&#8221;</td>
+</tr>
+<tr>
+<td>hasWordThisInContent</td>
+<td>calculated</td>
+<td>body.content.contains(&#8220;this&#8221;)</td>
+<td>true</td>
+</tr>
+<tr>
+<td>hasWordThatInContentOrRemark</td>
+<td>calculated</td>
+<td>body.content.contains(&#8220;that&#8221;) || body.remark.contains(&#8220;that&#8221;)</td>
+<td>false</td>
+</tr>
+<tr>
+<td>sizePlusSequence</td>
+<td>calculated</td>
+<td>size + sequence</td>
+<td>1002</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<ol>
+<li>找到数据集的ID。如果此前没有把它记下来的话，你可以直接查看所有的数据集列表。展开“datasets”，进入“GET /datasets”，点击“Try it out!”按钮，然后就可以在下面的返回结果中看到所有的数据集了。
+<p id="VmPsVEA"><img class="alignnone size-full wp-image-188 " src="../../wp-content/uploads/2016/04/img_57070d4d92b1d.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_57070d4d92b1d.png 780w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_57070d4d92b1d-300x117.png 300w" sizes="(max-width: 780px) 100vw, 780px" /></p>
+</li>
+<li>展开“fields”，进入“POST /datasets/{datasetId}/fields”
+<p id="crPOsaE"><img class="alignnone size-full wp-image-189 " src="../../wp-content/uploads/2016/04/img_57070e1b552f1.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_57070e1b552f1.png 806w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_57070e1b552f1-300x153.png 300w" sizes="(max-width: 806px) 100vw, 806px" /></p>
+</li>
+<li>输入数据集的ID
+<p id="sekgccY"><img class="alignnone size-full wp-image-190 " src="../../wp-content/uploads/2016/04/img_57070eaaebc34.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_57070eaaebc34.png 733w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_57070eaaebc34-300x128.png 300w" sizes="(max-width: 733px) 100vw, 733px" /></p>
+</li>
+<li>在下面找到右方的“Model Schema”，在它上面点击一下，其中的样例就会被拷贝到参数输入框里面</li>
+<li>输入合适的参数以定义字段
+<ul>
+<li>name &#8211; 就是这个字段的名字。字段名必须以英文字母开头，之后可以是英文字母或数字。</li>
+<li>path和formula &#8211; 两者只需要保留一个就行。对于native类型的字段，留下path；对于calculated类型的字段，留下formula。</li>
+<li>type &#8211; 可以是“native”或者“calculated”之一。也可以省略 &#8211; 具有path的就一定是native类型，具有formula的就一定是calculated类型。</li>
+<li>如果是native类型的字段，而且path与其名称相同，则可以简化成这样：<code>{"name": "myFieldName"}</code></li>
+<li>如果是calculated类型的字段，由于type可以省略，所以可以是类似这样：<code>{"name": "myCalculatedField", "formular":"body.remark.contains(\"that\")"}</code></li>
+</ul>
+</li>
+<li>点击“Try it out!”按钮</li>
+<li>向下滚动以查看服务器返回的结果。如果没有错误信息则表示这个字段创建成功。</li>
+<li>可以重复以上过程以创建多个字段。你可以为常量创建calculated类型的字段，但是一般来说没有必要，因为在定义统计的时候可以直接把常量用作统计对象。</li>
+</ol>
+<p>&nbsp;</p>
+<h3>第三步：定义统计</h3>
+<p>&nbsp;</p>
+<p>定义统计之前你需要知道数据集的ID，统计周期体系的ID，以及作为统计对象和生成统计类别的那些字段的名字。</p>
+<ol>
+<li>展开“statistics”，进入“POST /statistics”
+<p id="YXHPEFx"><img class="alignnone size-full wp-image-193 " src="../../wp-content/uploads/2016/04/img_570713d08eefd.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_570713d08eefd.png 737w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_570713d08eefd-300x139.png 300w" sizes="(max-width: 737px) 100vw, 737px" /></p>
+</li>
+<li>在下面找到右方的“Model Schema”，在它上面点击一下，其中的样例就会被拷贝到参数输入框里面
+<p id="ZhhLYuu"><img class="alignnone size-full wp-image-194 " src="../../wp-content/uploads/2016/04/img_5707144b70e79.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_5707144b70e79.png 930w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_5707144b70e79-300x120.png 300w" sizes="(max-width: 930px) 100vw, 930px" /></p>
+</li>
+<li>输入合适的参数以定义这个统计：
+<ul>
+<li>name &#8211; 这个统计的名字</li>
+<li>datasetId &#8211; 数据集的ID</li>
+<li>periodsId &#8211; 汇总周期体系的ID</li>
+<li>valueField &#8211; 作为统计对象的字段的名字。也可以直接在这里指定一个数值常量，比如“&#8221;1&#8243;”。</li>
+<li>includeCountDistinct &#8211; 可以是true或者false，表示是否需要统计互不相同的统计对象的个数。比如说有5条数据，其中的统计对象是firstName字段，而这5条数据的firstName字段的值分别是“Alice”、“Bob”、“Clark”、“Alice”、“Bob”，这种情况下互不相同的统计对象的个数是3。
+<ul>
+<li>不论includeCountDistinct是true还是false，只要统计对象字段的值是一个数字，系统都会对次数（count）、加总（summary）、最大（maximum）、最小（minimum）、平均（average）进行统计。</li>
+<li>当includeCountDistinct是true的时候，除了统计互不相同的值的个数之外，如果统计对象字段的值是一个数字，系统仍然会进行上述统计。假如统计对象字段的值不是一个数字，则用数字1进行统计，也就是说仍旧可以得到次数（count）统计。</li>
+</ul>
+</li>
+<li>keyFields &#8211; 如果不需要进行分类统计，则可以删掉这一项，或者删掉其中的“{}”使其值成为一个空的数组。如果需要进行分类统计，则可以在这里指定生成分类的字段名称。比如：
+<ul>
+<li><code>["shopId", "category"]</code>表示根据shopId与category这两个字段的值的组合进行分类统计</li>
+<li><code>[["firstSalespersonId", "secondSalespersonId"], "category"]</code>表示根据（firstSalespersonId或secondSalespersonId）与category这两个字段的值的组合进行分类统计，也就是说同一条订单的金额会被同时分别统计到两个销售员的头上。这样以来在查询的时候不论用哪个销售员的ID作为条件来查询，都可以得到体现了这笔订单的总金额。如果数据中firstSalespersonId与secondSalespersonId的值相同，则在这个销售员头上只记一笔，不会记两笔。</li>
+</ul>
+</li>
+<li>timestampFieldName &#8211; 数据中代表时间戳的字段的名字。如果不指定的话，则采用数据被接收到的时间作为时间戳。统计数据的周期汇总就是根据这个时间戳的。</li>
+<li>timestampFieldFormat &#8211; 时间戳字段的格式。如果没有指定时间戳字段，则可以删掉这一项。它的取值可以是：
+<ul>
+<li>日期时间格式模版，比如&#8221;yyyyMMdd&#8221;、&#8221;yyyyMMdd:HHmm&#8221;，表示时间戳字段的值应该是一个字符串，而且可以用这里指定的格式来进行解析。关于日期时间模版的具体格式可以参考这里：<a href="../date-time-patterns/index.html">日期与时间格式</a>。</li>
+<li>&#8220;EPOCH_MILLIS&#8221;，表示时间戳字段的值应该是一个整数，代表自从1970年1月1日零点开始所经历的毫秒数</li>
+<li>&#8220;EPOCH_SECONDS&#8221;，表示时间戳字段的值应该是一个整数，代表自从1970年1月1日零点开始所经历的秒数</li>
+</ul>
+</li>
+<li>timestampFieldZone &#8211; 时间戳字段的时区。如果没有指定时间戳字段，则可以删掉这一项。完整的时区列表可以再这里找到：<a href="../supported-time-zones/index.html">支持的时区列表</a>。在中国一般只需要用“Asia/Shanghai”就可以了（没有“Asia/Beijing”）。</li>
+</ul>
+</li>
+<li>点击“Try it out!”按钮</li>
+<li>向下滚动以查看服务器返回的结果。你将在返回结果中看到这个新的统计的ID。把它复制下来，在查询统计结果的时候需要用到。</li>
+<li>可以重复以上过程以创建多项统计。</li>
+</ol>
+<p>&nbsp;</p>
+<h3>第四步：查询统计结果</h3>
+<p>&nbsp;</p>
+<p>统计结果只有在统计定义被保存之后才会生成。在统计定义被保存之前系统所接收到的数据不会被重新处理。所以为了能查到有意义的统计结果，需要保证在定义好统计之后，有数据被接收到。</p>
+<ol>
+<li>获得数据集的查询秘钥。具体过程可以参考《<a href="../how-to-send-data-to-rtstatistics-com-in-5-minutes/index.html">5分钟搞定发送数据到rtstatistics.com</a>》中的“第三步：得到数据集的API秘钥”。</li>
+<li>打开https://api.rtstatistics.com/</li>
+<li>把查询秘钥作为API key
+<p id="uSljwse"><img class="alignnone size-full wp-image-197 " src="../../wp-content/uploads/2016/04/img_570730f22382f.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_570730f22382f.png 866w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_570730f22382f-300x81.png 300w" sizes="(max-width: 866px) 100vw, 866px" /></p>
+</li>
+<li>展开“query”，进入“GET /statistics/{id}/detail”</li>
+<li><span style="line-height: 1.5;">输入查询条件：<br />
+</span><img class="alignnone size-full wp-image-202 " src="../../wp-content/uploads/2016/04/img_5707341d7c7e1.png" alt="" srcset="http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_5707341d7c7e1.png 616w, http://zh.rtstatistics.com/wp-content/uploads/2016/04/img_5707341d7c7e1-300x194.png 300w" sizes="(max-width: 616px) 100vw, 616px" /></p>
+<ul>
+<li>id &#8211; 统计项的ID</li>
+<li>_columns &#8211; 指定需要得到哪些统计结果。可以不指定或者用“all”，表示需要所有的统计结果。可以是这些的组合（用逗号或空格分隔）：
+<ul>
+<li>count &#8211; 计数</li>
+<li>sum &#8211; 加总</li>
+<li>avg &#8211; 平均</li>
+<li>min &#8211; 最小值</li>
+<li>max &#8211; 最大值</li>
+<li>unique &#8211; 互不相同的值的个数</li>
+<li>estimated &#8211; 互不相同的值的个数是精确的还是估算的。一般来说当数量比较小的时候是精确的，数量多了之后就是估算的。</li>
+<li>values &#8211; 如果互不相同的值的个数是精确的，则返回那些具体的取值。</li>
+</ul>
+</li>
+<li>_from &#8211; 开始时间，&#8221;yyyyMMddHHmm&#8221;或&#8221;yyyyMMddHH&#8221;或&#8221;yyyyMMdd&#8221;或&#8221;yyyyMM&#8221;格式，表示需要返回正好在这个时间以及在这个时间之后的数据的统计</li>
+<li>_to &#8211; 结束时间，&#8221;yyyyMMddHHmm&#8221;或&#8221;yyyyMMddHH&#8221;或&#8221;yyyyMMdd&#8221;或&#8221;yyyyMM&#8221;格式，表示需要返回在这个时间之前的数据的统计</li>
+<li>_period &#8211; 汇总周期。比如“1 hour”、“5 minutes”、“10 hour”。单位末尾可以带“s”也可以不带。如果该统计所引用的汇总周期体系里只有一个汇总周期则可以省略。</li>
+<li>_zone &#8211; 汇总周期的时区。如果该统计所引用的汇总周期体系里没有用到多于一个的时区则可以省略。</li>
+<li>_absent &#8211; 可以是“empty”或省略。如果是“empty”则表示没有指定的统计分类参数按空字符串取值，否则的话表示没有指定的统计分类参数按null取值。</li>
+<li>dynamic parameters &#8211; 统计分类参数。对应到定义统计时候所选择的keyFields中的那些字段。例如，keyFields如果定义为<code>["shopId", "category"]</code>，则这里可以添加两个参数，分别是shopId和category，取值分别为100和shoes，从而查询出来的结果就是针对shopId为100以及category为shoes的组合的条件下的统计。</li>
+</ul>
+</li>
+</ol>
+<p>&nbsp;</p>
+<h3>完成！</h3>
+<p>&nbsp;</p>
+<p>现在你已经成功地创建了统计，并且查询到了统计结果，是不是很简单？</p>
+<p>如有任何的意见或者问题，欢迎发送邮件至：<a href="mailto:support@rtstatistics.com">support@rtstatistics.com</a>.</p>
+<p>&nbsp;</p>
+<h2>其他相关内容</h2>
+<ul>
+<li><a href="../how-to-send-data-to-rtstatistics-com-in-5-minutes/index.html">教程：5分钟搞定发送数据</a></li>
+<li><a href="../live-statistics-trump-vs-clinton-according-to-comments-in-askreddit/index.html">演示 – 实时统计：在“askreddit”评论中提及特朗普的次数对比提及克林顿的次数</a></li>
+<li><a href="../live-usage-statistics-of-mobile-app-libbooks/index.html">演示 – 手机应用LibBooks的实时使用情况统计</a></li>
+</ul>
+
+		
+	</div><!-- .entry-content -->
+
+	
+</article><!-- #post-## -->
+
+
+				
+
+
+			
+
+
+		</main><!-- #main -->
+
+	</div><!-- #primary -->
+
+</div><!-- .content-left-wrap -->
+
+
+
+
+</div><!-- .container -->
+
+
+	</div><!-- .site-content -->
+
+<footer id="footer">
+
+<div class="container">
+
+
+
+	<div class="col-md-3 company-details"><div class="icon-top green-text"><img src="../../wp-content/themes/zerif-lite/images/envelope4-green.png"></div><a href="mailto:info@rtstatistics.com">info@rtstatistics.com</a></div><div class="col-md-3 copyright"><ul class="social"><li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li><li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li><li><a target="_blank" href="http://www.linkedin.com/company/rtstatistics-com"><i class="fa fa-linkedin"></i></a></li></ul>Copyright ©2015-2016 Real-time Statistics Technologies</div>
+</div> <!-- / END CONTAINER -->
+
+</footer> <!-- / END FOOOTER  -->
+
+
+
+<script type='text/javascript' src='../../wp-content/themes/zerif-lite/js/bootstrap.min11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='../../wp-content/themes/zerif-lite/js/jquery.knob11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='../../wp-content/themes/zerif-lite/js/smoothscroll11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='../../wp-content/themes/zerif-lite/js/scrollReveal11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='../../wp-content/themes/zerif-lite/js/zerif11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed.min1c9b.js?ver=4.6.1'></script>
+
+
+
+</body>
+
+
+<!-- Mirrored from zh.rtstatistics.com/zh-resources/how-to-setup-real-time-statistics-in-5-minutes/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Oct 2018 08:18:53 GMT -->
+</html>
